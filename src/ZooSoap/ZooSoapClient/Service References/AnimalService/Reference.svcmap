@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f347fea5-6217-41e5-ae64-47ba67bdb253" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:5075/AnimalService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AnimalService.xsd" MetadataType="Schema" ID="c2f4651c-2f8a-4bec-b993-a1a255fb52c8" SourceId="1" SourceUrl="http://localhost:5075/AnimalService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AnimalService1.xsd" MetadataType="Schema" ID="20771831-e563-4515-a0fe-9a819ac1c3d2" SourceId="1" SourceUrl="http://localhost:5075/AnimalService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AnimalService.wsdl" MetadataType="Wsdl" ID="9c17ddf4-0118-45cc-9f95-fbab5833774c" SourceId="1" SourceUrl="http://localhost:5075/AnimalService.svc?wsdl" />
+    <MetadataFile FileName="AnimalService2.xsd" MetadataType="Schema" ID="a52aff5c-0963-4856-bab3-09c7ed7d6b03" SourceId="1" SourceUrl="http://localhost:5075/AnimalService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AnimalService.disco" MetadataType="Disco" ID="253f70b4-cfb4-4926-8a35-58c6739966b5" SourceId="1" SourceUrl="http://localhost:5075/AnimalService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
