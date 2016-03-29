@@ -28,6 +28,11 @@ namespace ZooRestServer
         {
             // Add framework services.
             services.AddMvc();
+            services.AddSwaggerGen();
+            services.ConfigureSwaggerSchema(options =>
+            {
+                options.DescribeAllEnumsAsStrings = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +46,10 @@ namespace ZooRestServer
             app.UseStaticFiles();
 
             app.UseMvc();
+
+            app.UseSwaggerGen();
+
+            app.UseSwaggerUi();
         }
 
         // Entry point for the application.
