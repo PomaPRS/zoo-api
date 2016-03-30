@@ -16,10 +16,28 @@ namespace ZooRestServer.Controllers
     {
         public AnimalsController()
         {
-            this.FavoriteAnimals = new List<Animal>()
+            FavoriteAnimals = new List<Animal>()
             {
-                new Animal() {Name = "Lucy", Type = AnimalType.Cat},
-                new Animal() {Name = "Rocky", Type = AnimalType.Dog}
+                new Animal()
+                {
+                    Name = "Lucy",
+                    Type = AnimalType.Cat,
+                    Appearance = new Appearance()
+                    {
+                        Color = "white",
+                        HeightMeters = 0.157
+                    }
+                },
+                new Animal()
+                {
+                    Name = "Rocky",
+                    Type = AnimalType.Dog,
+                    Appearance = new Appearance()
+                    {
+                        Color = "dark green",
+                        HeightMeters = 0.5
+                    }
+                }
             }
             .ToDictionary(x => x.Type);
         }

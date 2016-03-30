@@ -24,5 +24,18 @@ namespace ZooSoapServer
 
         [DataMember]
         public AnimalType Type { get; set; }
+
+        [DataMember]
+        public Appearance Appearance { get; set; }
+    }
+
+    [DataContract]
+    public class Appearance
+    {
+        [DataMember]
+        public double HeightMeters { get; set; }
+
+        [DataMember]
+        public string Color { get; set; }
     }
 }

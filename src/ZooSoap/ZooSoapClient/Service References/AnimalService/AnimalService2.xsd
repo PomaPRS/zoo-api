@@ -9,9 +9,17 @@
   <xs:element name="AnimalType" nillable="true" type="tns:AnimalType" />
   <xs:complexType name="Animal">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Appearance" nillable="true" type="tns:Appearance" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Type" type="tns:AnimalType" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Animal" nillable="true" type="tns:Animal" />
+  <xs:complexType name="Appearance">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HeightMeters" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Appearance" nillable="true" type="tns:Appearance" />
 </xs:schema>

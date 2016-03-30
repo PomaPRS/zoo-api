@@ -34,6 +34,9 @@ namespace ZooSoapClient.AnimalService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ZooSoapClient.AnimalService.Appearance AppearanceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -46,6 +49,19 @@ namespace ZooSoapClient.AnimalService {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ZooSoapClient.AnimalService.Appearance Appearance {
+            get {
+                return this.AppearanceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AppearanceField, value) != true)) {
+                    this.AppearanceField = value;
+                    this.RaisePropertyChanged("Appearance");
+                }
             }
         }
         
@@ -71,6 +87,67 @@ namespace ZooSoapClient.AnimalService {
                 if ((this.TypeField.Equals(value) != true)) {
                     this.TypeField = value;
                     this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Appearance", Namespace="http://schemas.datacontract.org/2004/07/ZooSoapServer")]
+    [System.SerializableAttribute()]
+    public partial class Appearance : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ColorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double HeightMetersField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Color {
+            get {
+                return this.ColorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ColorField, value) != true)) {
+                    this.ColorField = value;
+                    this.RaisePropertyChanged("Color");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double HeightMeters {
+            get {
+                return this.HeightMetersField;
+            }
+            set {
+                if ((this.HeightMetersField.Equals(value) != true)) {
+                    this.HeightMetersField = value;
+                    this.RaisePropertyChanged("HeightMeters");
                 }
             }
         }
