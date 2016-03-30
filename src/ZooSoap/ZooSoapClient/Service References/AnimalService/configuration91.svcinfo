@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="5Z1Qp7PhrOOhHFVi9peuoBVpru0=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="4kPO8GBXTkOYECJRTTNGU4a3bSM=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IAnimalService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IAnimalService" contract="AnimalService.IAnimalService" bindingType="basicHttpBinding" address="http://localhost:5075/AnimalService.svc" bindingConfiguration="BasicHttpBinding_IAnimalService">
+    <endpoint name="BasicHttpBinding_IAnimalService" contract="AnimalService.IAnimalService" bindingType="basicHttpBinding" address="http://172.16.0.5:5272/AnimalService.svc" bindingConfiguration="BasicHttpBinding_IAnimalService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:5075/AnimalService.svc</serializedValue>
+          <serializedValue>http://172.16.0.5:5272/AnimalService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
