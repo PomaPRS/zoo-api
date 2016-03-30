@@ -1,15 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Swashbuckle.SwaggerGen;
 
 namespace ZooRestServer
 {
+    public class HostDocumentFilter : IDocumentFilter
+    {
+        public void Apply(SwaggerDocument swaggerDoc, DocumentFilterContext context)
+        {
+            swaggerDoc.Host = "localhost:5272";
+            swaggerDoc.Schemes = new List<string>() { "http" };
+        }
+    }
+
     public class Startup
     {
         public Startup(IHostingEnvironment env)
@@ -32,6 +39,10 @@ namespace ZooRestServer
             services.ConfigureSwaggerSchema(options =>
             {
                 options.DescribeAllEnumsAsStrings = true;
+            });
+            services.ConfigureSwaggerDocument(options =>
+            {
+                options.DocumentFilter(new HostDocumentFilter());
             });
         }
 

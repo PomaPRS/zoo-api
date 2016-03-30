@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNet.Mvc;
+using Swashbuckle.SwaggerGen.Annotations;
 using ZooRestServer.Models;
 
 namespace ZooRestServer.Controllers
@@ -26,6 +27,7 @@ namespace ZooRestServer.Controllers
         private Dictionary<AnimalType, Animal> FavoriteAnimals { get; }
 
         [HttpGet("favorite/{animalType}")]
+        [SwaggerOperation("GetFavoriteAnimal")]
         public Animal Get(AnimalType animalType)
         {
             return FavoriteAnimals[animalType];

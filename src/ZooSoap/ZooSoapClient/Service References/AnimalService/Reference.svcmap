@@ -19,7 +19,7 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:5075/AnimalService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost.fiddler:5075/AnimalService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="AnimalService.xsd" MetadataType="Schema" ID="c2f4651c-2f8a-4bec-b993-a1a255fb52c8" SourceId="1" SourceUrl="http://localhost:5075/AnimalService.svc?xsd=xsd0" />
